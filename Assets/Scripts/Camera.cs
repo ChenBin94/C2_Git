@@ -30,6 +30,13 @@ public class Camera : MonoBehaviour
         LookAtPos = transform.position * 2.0f - CharacterPos;
         O_LookAtPos.transform.position = LookAtPos;
 
+
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            SetCameraBodyPos(new Vector3(35.0f, 11.0f, 0.0f));
+        }
+
     }
 
     public void SetCameraBodyPos(Vector3 _Pos)

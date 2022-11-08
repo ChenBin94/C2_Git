@@ -17,10 +17,7 @@ public class Mouse : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            T_CameraControlPoint.GetComponent<Camera>().SetCameraBodyPos(new Vector3(35.0f, 11.0f, 0.0f));
-        }
+
 
 
     }
