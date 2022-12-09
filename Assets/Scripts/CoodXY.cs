@@ -30,10 +30,11 @@ public class CoodXY : MonoBehaviour
 
     void DisplayCoordinates()
     {
-        coordinates.x = Mathf.RoundToInt(transform.parent.position.x / 10);
-        coordinates.y = Mathf.RoundToInt(transform.parent.position.z / 10);
+        coordinates.x = Mathf.RoundToInt(transform.parent.position.x / 2);
+        coordinates.y = Mathf.RoundToInt(transform.parent.position.z / 2);
 
-        lable.text = coordinates.x + "," + coordinates.y;
+        //lable.text = coordinates.x + "," + coordinates.y;
+        lable.text = " ";
     }
 
     void UpdateObjectName()
