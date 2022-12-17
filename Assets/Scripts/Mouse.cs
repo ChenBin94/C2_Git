@@ -11,7 +11,7 @@ public class Mouse : MonoBehaviour
         Debug.Log(this.transform.position);
 
         T_CameraControlPoint = GameObject.FindGameObjectWithTag("CameraControlPoint");
-        T_CameraControlPoint.GetComponent<Camera>().SetCameraBodyPos(transform.position);
+        T_CameraControlPoint.GetComponent<CameraMove>().SetCameraBodyPos(transform.position);
     }
 
 

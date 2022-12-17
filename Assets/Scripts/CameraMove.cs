@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CameraMove : MonoBehaviour
 {
     // CamreaPos
     [SerializeField] Vector3 CameraPos = new Vector3(5.0f, 11.0f, 0.0f);

@@ -4,7 +4,22 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
+    enum ActionStates
+    {
+        Stay,
+        Move,
+        Handup,
+
+
+        ActionEnd
+    }
+
+    //ActionStates m_Action = ActionStates.Stay;
+
+
+
     public GameObject m_Character;
+    
 
 
     Animator animator;
@@ -26,5 +41,37 @@ public class CharacterMovement : MonoBehaviour
         if (speed > 0.001f) animator.SetBool("IsWalking", true);
         else animator.SetBool("IsWalking", false);
         //Debug.Log(speed);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+    public void SetAction_Handup()
+    {
+        animator.SetBool("IsWalking", false);
+        animator.SetBool("IsHandUp", true);
+    }
+
+
 }

@@ -103,6 +103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: G01_010_WIFI
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6e46b535a9e530a4189b4fa03e4d58e4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e46b535a9e530a4189b4fa03e4d58e4, type: 3}
 --- !u!4 &5224810826176194044 stripped

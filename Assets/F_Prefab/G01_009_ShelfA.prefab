@@ -99,6 +99,10 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5093328485439484206, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4198421389747228059, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -107,12 +111,36 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3002466751115093030, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1702430395602233465, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -296428025275448465, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
       propertyPath: m_Name
       value: G01_009_ShelfA
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1234812417039679884, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
       propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984579676706629052, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676063109430448986, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4362407836319581454, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
@@ -125,6 +153,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5174641053598680188, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
       propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272360301462974495, guid: 62af822d3d5913042abc27115c22d59e, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8664078658034819206, guid: 62af822d3d5913042abc27115c22d59e, type: 3}

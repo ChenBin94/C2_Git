@@ -12,8 +12,9 @@ public class CharacterControl : MonoBehaviour
 
     // 
     public GameObject animObj;
-    Animator animator;
 
+    bool isMoving = true;
+    float m_Timer = 0.0f;
 
 
     // Start is called before the first frame update
@@ -22,11 +23,11 @@ public class CharacterControl : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         StartCoroutine(FollowPath());
 
-        animator = animObj.GetComponent<Animator>();
     }
 
     IEnumerator FollowPath()
     {
+        
         {
             foreach (Waypoint waypoint in path)
             {
@@ -34,18 +35,26 @@ public class CharacterControl : MonoBehaviour
                 Vector3 EndLocation = waypoint.transform.position;
 
 
-                while ((EndLocation - transform.position).magnitude >= 0.1f)
+                while ((EndLocation - transform.position).magnitude >= 0.2f)
                 {
                     // set move
                     Vector3 CharacterToEndLocation = EndLocation - transform.position;
                     Vector3 Front = CharacterToEndLocation.normalized;
 
                     Vector3 NowVel = Time.deltaTime * Front * Speed;
-                    if (NowVel.magnitude < 3.0f) rb.velocity = Time.deltaTime * Front * Speed;
+                    if (isMoving) 
+                    {
+                        if (NowVel.magnitude < 3.0f) rb.velocity = Time.deltaTime * Front * Speed;
+                    }
+                    else
+                    {
+                        rb.velocity = Vector3.zero;
+                    }
 
                     // set lookat
                     Vector3 ForWardLocation = transform.forward + transform.position;
                     Vector3 LookAtLocation = ForWardLocation + (EndLocation - ForWardLocation) * 0.01f;
+                    LookAtLocation.y = transform.position.y;
                     transform.LookAt(LookAtLocation);
 
                     // wait
@@ -61,7 +70,21 @@ public class CharacterControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        m_Timer += Time.deltaTime;
+        if(m_Timer > 3) 
+        { 
+            isMoving = false;
+            SetMovement_Action();
+        }
 
     }
+
+    void SetMovement_Action()
+    {
+        animObj.GetComponent<CharacterMovement>().SetAction_Handup();
+    }
+
+
+
+
 }
