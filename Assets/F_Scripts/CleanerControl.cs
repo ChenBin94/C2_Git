@@ -5,10 +5,17 @@ using UnityEngine;
 
 public class CleanerControl : MonoBehaviour
 {
+    // public
     [SerializeField] float CleanerPower = 1.0f;
+    public Material m_material;
 
+    // private
     private Camera mainCamera;
     private Vector3 currentPosition = Vector3.zero;
+    private bool isInuse = false;
+    private float Timer = 0.0f;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +26,9 @@ public class CleanerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Timer += Time.deltaTime;
+
+
         if (Input.GetMouseButton(0))
         {
             var ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -32,8 +42,19 @@ public class CleanerControl : MonoBehaviour
             }
         }
 
-        CleanerMover();
-        CleanerTurnner();
+        if (isInuse)
+        {
+            CleanerMover();
+            CleanerTurnner();
+
+            float value = Mathf.Sin(Timer * 3.0f) + 1.0f;
+            m_material.SetFloat("_OutValue", 0.1f * value);
+        }
+        else
+        {
+            m_material.SetFloat("_OutValue", 0.0f);
+        }
+
     }
 
     void CleanerMover()
@@ -55,6 +76,11 @@ public class CleanerControl : MonoBehaviour
         Vector3 m_PresentTurn = transform.position + transform.forward;
         transform.LookAt(m_PresentTurn + (m_TargetTurn - m_PresentTurn) * 0.05f);
 
+    }
+
+    public void SetIsInuse(bool _use)
+    {
+        isInuse = _use;
     }
 
 

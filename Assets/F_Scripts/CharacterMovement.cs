@@ -4,20 +4,6 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    enum ActionStates
-    {
-        Stay,
-        Move,
-        Handup,
-
-
-        ActionEnd
-    }
-
-    //ActionStates m_Action = ActionStates.Stay;
-
-
-
     public GameObject m_Character;
     
 
@@ -73,5 +59,10 @@ public class CharacterMovement : MonoBehaviour
         animator.SetBool("IsHandUp", true);
     }
 
+    public void SetAction_Walk()
+    {
+        animator.SetBool("IsWalking", true);
+        animator.SetBool("IsHandUp", false);
+    }
 
 }

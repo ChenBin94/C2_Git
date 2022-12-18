@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771289059873558261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0.50001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43,7 +43,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1011075799072671463
 GameObject:
@@ -126,6 +126,7 @@ MonoBehaviour:
   path: []
   Speed: 150
   animObj: {fileID: 9186792665165344653}
+  Item_Switch: {fileID: 0}
 --- !u!1001 &8340493408687952604
 PrefabInstance:
   m_ObjectHideFlags: 0
